@@ -12,14 +12,16 @@
     <title>Title</title>
 </head>
 <body>
-<h2>Xin chào, ${player.username} - Số dư: ${player.balance} VNĐ</h2>
-
-<h3>Danh sách hạt giống</h3>
-<c:forEach var="s" items="${seeds}">
+<h2>Shop</h2>
+<a href="warehouse">Go to Warehouse</a>
+<c:forEach var="seed" items="${seedsList}">
     <div>
-        <img src="${s.imageUrl}" width="100px"/>
-        <p>${s.seedsName}</p>
-        <p>Giá: ${s.price} VNĐ</p>
+        <p>${seed.seedsName} - ${seed.price}</p>
+        <img src="${seed.imageUrl}" width="100"/>
+        <form method="post" action="buySeed">
+            <input type="hidden" name="seedId" value="${seed.id}"/>
+            <button type="submit">Buy</button>
+        </form>
     </div>
 </c:forEach>
 </body>

@@ -11,9 +11,16 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Chào mừng đến với Game Nông Trại!</h1>
-<a href="shop.jsp"><img src="img/shop.png" width="100"/></a>
-<a href="warehouse.jsp"><img src="img/kho.png" width="100"/></a>
-<a href="farm.jsp"><img src="img/nongtrai.png" width="100"/></a>
+<h2>Welcome to the Farm Game</h2>
+<c:if test="${not empty currentUser}">
+    <div>
+        <a href="shop">Shop</a> |
+        <a href="warehouse">Warehouse</a> |
+        <a href="farm">Farm</a>
+    </div>
+</c:if>
+<c:if test="${empty currentUser}">
+    <a href="registerUser">Register</a> | <a href="login">Login</a>
+</c:if>
 </body>
 </html>

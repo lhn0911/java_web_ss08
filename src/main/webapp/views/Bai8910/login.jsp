@@ -12,13 +12,15 @@
     <title>Title</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/login" method="post">
-    Username: <input name="username"/><br>
-    Password: <input name="password" type="password"/><br>
-    <input type="submit" value="Login"/>
+<h2>Login</h2>
+<form action="login" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required><br>
+
+    <input type="submit" value="Login">
 </form>
-<c:if test="${not empty message}">
-    <p style="color:red">${message}</p>
-</c:if>
 </body>
 </html>

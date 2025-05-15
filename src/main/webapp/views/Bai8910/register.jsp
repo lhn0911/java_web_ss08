@@ -12,14 +12,17 @@
     <title>Title</title>
 </head>
 <body>
-<form action="${pageContext.request.contextPath}/register" method="post">
-    Username: <input name="username"/><br>
-    Password: <input name="password" type="password"/><br>
-    Email: <input name="email"/><br>
-    <input type="submit" value="Register"/>
+<form action="registerUser" method="post">
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required><br>
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required><br>
+
+    <input type="submit" value="registerUser">
 </form>
-<c:if test="${not empty message}">
-    <p style="color:red">${message}</p>
-</c:if>
 </body>
 </html>

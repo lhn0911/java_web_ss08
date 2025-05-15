@@ -17,7 +17,7 @@
 <a href="users">Bai5</a><br>
 <a href="employees">Bai6</a><br>
 <a href="quiz">Bai7</a><br>
-<a href="game">Bai8910</a><br>
+<a href="home">Bai8910</a><br>
 
 </body>
 </html>
